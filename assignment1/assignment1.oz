@@ -71,17 +71,60 @@ end
 % Task 5
 local Circle R in
    proc {Circle R} A D C PI in
-      {System.showInfo "run"}
-   %PI = 355.0 / 113.0
    
-   %A = PI * R * R
-   %D = 2.0 * R
-   %C = PI * D
+      PI = 355.0 / 113.0
+   
+      A = PI * R * R
+      D = 2.0 * R
+      C = PI * D
 
    
-   %{System.showInfo "Area: " A}
+      {System.showInfo "Area: "}
+      {System.showInfo A}
+
+      {System.showInfo "Diameter: "}
+      {System.showInfo D}
+
+      {System.showInfo "Circumference: "}
+      {System.showInfo C} 
    end
-   {Circle 2}
+   {Circle 2.0}
 end
 
+% Task 6.a
+local Factorial N in
+   fun {Factorial N}
+      if N > 0 then
+	 N * {Factorial N - 1}
+      else
+	 1
+      end
+   end
+   {System.showInfo "Factorial of 5: "#{Factorial 5}}
+end
 
+% Task 7.a
+local Length List R in
+   fun {Length List}
+      if List == nil then
+	 0
+      else
+	 1 + {Length List.2}
+      end
+   end
+   {System.showInfo {Length [1 2 3 4]}}
+end
+
+% 7.b
+
+
+% 7.c
+
+
+% 7.d
+
+
+% 7.e
+
+
+% 7.f
