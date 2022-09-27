@@ -224,4 +224,5 @@ local Pop List in
    end
    {System.show {Pop [1 2 3 4]}}
    {System.show {Pop [1]}}
-   {System.show {Pop nil}} end
+   {System.show {Pop nil}}
+end
