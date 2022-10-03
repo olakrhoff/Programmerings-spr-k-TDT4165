@@ -123,3 +123,24 @@ end
 
 % Task 5
 % 5a
+declare LazyNumberGenerator
+fun {LazyNumberGenerator StartValue}
+   StartValue | fun {$} {LazyNumberGenerator StartValue + 1} end
+end
+
+{System.showInfo "Task 5"}
+
+
+{System.showInfo "Task 5a: calls: {LazyNumberGenerator 0}.1"}
+
+{System.show {LazyNumberGenerator 0}.1}
+
+{System.showInfo "Task 5a: calls: {{LazyNumberGenerator 0}.2}.1"}
+
+{System.show {{LazyNumberGenerator 0}.2}.1}
+
+{System.showInfo "Task 5a: calls: {{{{{{LazyNumberGenerator 0}.2}.2}.2}.2}.2}.1"}
+
+{System.show {{{{{{LazyNumberGenerator 0}.2}.2}.2}.2}.2}.1}
+
+
