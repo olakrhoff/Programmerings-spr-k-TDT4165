@@ -53,12 +53,8 @@ end
 local RealSol X1 X2 in   
    {System.showInfo "Task 1b: input: A: 2 B: 1 C: 2"}
 
-   {QuadraticEquation 2.0 1.0 2.0 RealSol X1 X2}
-   {System.showInfo "RealSol: "}
-   {System.show RealSol}
-   {System.showInfo "X1: "}
-   {System.show X1}
-   {System.showInfo "X2: "}
-   {System.show X2}
+   {QuadraticEquation 2.0 1.0 2.0 RealSol X1 X2} {System.showInfo
+   "RealSol: "} {System.show RealSol} {System.showInfo "X1: "}
+   {System.show X1} {System.showInfo "X2: "} {System.show X2}
 
 end
