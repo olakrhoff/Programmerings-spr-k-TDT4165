@@ -58,3 +58,64 @@ local RealSol X1 X2 in
    {System.show X1} {System.showInfo "X2: "} {System.show X2}
 
 end
+
+
+% Task 2
+
+declare Sum
+fun {Sum List}
+   case List of Head | Tail then
+      Head + {Sum Tail}
+   else
+      0
+   end
+end
+
+{System.showInfo "Task 2"}
+
+
+{System.showInfo "Task 2: input: [1 2 3 4 5 6]"}
+
+{System.show {Sum [1 2 3 4 5 6]}}
+
+
+
+
+% Task 3
+
+% 3ab
+declare RightFold
+fun {RightFold List Op U}
+   case List of Head | Tail then
+      {Op Head {RightFold Tail Op U}}
+   else
+      U
+   end
+end
+
+{System.showInfo "Task 3"}
+
+{System.showInfo "Task 3a: input: SUM [1 2 3 4 5 6]"}
+% 3c
+{System.show {RightFold [1 2 3 4 5 6] fun {$ A B} A + B end 0}}
+
+{System.showInfo "Task 3a: input: LENGTH [1 2 3 4 5 6]"}
+% 3c
+{System.show {RightFold [1 2 3 4 5 6] fun {$ A B} 1 + B end 0}}
+
+
+
+% Task 4
+declare Quadratic
+fun {Quadratic A B C}
+   fun {$ X}
+      A * X * X + B * X + C
+   end
+end
+
+{System.showInfo "Task 4"}
+
+
+{System.showInfo "Task 4: input: \{\{Quadratic 3 2 1\} 2\}"}
+
+{System.show {{Quadratic 3 2 1} 2}}
