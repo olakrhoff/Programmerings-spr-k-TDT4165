@@ -1,3 +1,15 @@
+% Task 1
+payment(0, []).
+payment(Sum, [coin(Needed, Value, Stock)|Tail]) :-
+    Needed in 0..Stock,
+
+    Sum #= Needed * Value + Rest,
+    payment(Rest, Tail).
+
+
+
+
+% Task 2
 :- use_module(library(clpfd)).
   distance(c1, c2, 10, 1). distance(c1, c3, 0, 0). distance(c1, c4, 7, 1).
   distance(c1, c5, 5, 1). distance(c2, c3, 4, 1). distance(c2, c4, 12, 1).
