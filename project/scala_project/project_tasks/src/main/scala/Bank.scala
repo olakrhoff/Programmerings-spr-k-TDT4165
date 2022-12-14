@@ -33,7 +33,6 @@ class Bank(val allowedAttempts: Integer = 3) {
     private def processTransactions: Unit = {
       //Pop the transaction from the queue
       val transaction: Transaction = transactionsQueue.pop
-      //transaction.run()
       //Spawn a thread that executes the transaction
       val thread = new Thread {
         override def run() {
